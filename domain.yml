@@ -1,0 +1,80 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+###########
+  - about_python
+  - python_uses
+  - why_python
+  - define_variable_in_python
+  - data_types
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a snakebot"
+
+###############
+  utter_about_python:
+  - text: |
+      - Python is a programming language.
+      - Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+
+  utter_python_uses:
+  - text: |
+      - web development (server-side)
+      - software development
+      - artificial intelligence
+      - system scripting
+      - web scraping
+
+  utter_why_python:
+  - text: |
+      - Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).
+      - Python has a simple syntax similar like English language.
+      - Python has syntax that allows developers to write programs with fewer lines than some other programming languages.
+      - Python can be treated in a procedural way, an object-oriented way or a functional way.
+      - Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
+
+  utter_define_variable_in_python:
+  - text: |
+      - Python has no command for declaring a variable.
+      - A variable is created the moment you first assign a value to it
+      - e.g : x = 7
+      - e.g : y = "Ronaldo"
+
+  utter_data_types:
+  - text: |
+      - Numeric type: int, float, complex
+      - Text type: str
+      - Sequence type: list, tuple, range
+      - Mapping type:	dict
+      - Set type:	set, frozenset
+      - boolean type:	bool
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

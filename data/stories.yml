@@ -1,0 +1,56 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+##############
+- story: about_python
+  steps:
+  - intent: about_python
+  - action: utter_about_python
+
+- story: python_uses
+  steps:
+  - intent: python_uses
+  - action: utter_python_uses
+
+- story: why_python
+  steps:
+  - intent: why_python
+  - action: utter_why_python
+
+- story: define_variable_in_python
+  steps:
+  - intent: define_variable_in_python
+  - action: utter_define_variable_in_python
+
+- story: data_types
+  steps:
+  - intent: data_types
+  - action: utter_data_types
