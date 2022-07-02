@@ -126,3 +126,47 @@ nlu:
     - available datatypes
     - datatypes
     - what are the datatypes available in python
+
+- intent: python_strings
+  examples: |
+    - string in python
+    - str python
+    - string datatype
+    - str
+
+- intent: python_list
+  examples: |
+    - list datatype
+    - lists
+    - list
+    - what is list datatype
+
+- intent: python_tuples
+  examples: |
+    - python tuples
+    - tuples
+    - tuple
+    - what is tuple datatype
+
+- intent: python_set
+  examples: |
+    - python set
+    - set
+    - sets
+    - what is set datatype
+
+- intent: python_dict
+  examples: |
+    - python dict
+    - dictionary
+    - dict
+    - what is dictionary datatype
+
+###########
+
+- intent: get_senderid
+  examples: |
+    - senderid
+    - what is my senderid
+    - please print senderid
+    - sender id

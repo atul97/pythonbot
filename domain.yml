@@ -15,6 +15,13 @@ intents:
   - define_variable_in_python
   - data_types
 
+  - python_strings
+  - python_list
+  - python_tuples
+  - python_set
+  - python_dict
+
+  - get_senderid
 
 responses:
   utter_greet:
@@ -74,6 +81,53 @@ responses:
       - Set type:	set, frozenset
       - boolean type:	bool
 
+  utter_python_strings:
+  - text: |
+      - Strings in python are surrounded by either single quotation marks, or double quotation marks.
+      - ex - x = "hello"
+      - ex - y = 'hello world'
+
+  utter_python_list:
+  - text: |
+      - Lists are used to store multiple items in a single variable.
+      - Lists are created using square brackets
+      - List items are ordered, changeable, and allow duplicate values.
+      - List items are indexed, the first item has index [0], the second item has index [1] etc.
+      - The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+      - Since lists are indexed, lists can have items with the same value:
+      - x = ["vw", "honda", "nissan"]
+      - y = ["vw", 2, 11, ['gtr']]
+
+  utter_python_tuples:
+  - text: |
+      - Tuples are used to store multiple items in a single variable.
+      - A tuple is a collection which is ordered and unchangeable
+      - Tuples are written with round brackets.
+      - Tuple items are ordered, unchangeable, and allow duplicate values.
+      - x = ("vw", "honda", "nissan")
+      - y = ("vw", 2, 11, ['gtr'])
+  
+  utter_python_set:
+  - text: |
+      - Sets are used to store multiple items in a single variable
+      - A set is a collection which is unordered, unchangeable*, and unindexed.
+      - Sets cannot have two items with the same value.
+      - Sets are written with curly brackets.
+      - x = {"vw", "honda", "nissan"}
+      - y = {"vw", 2, 11, ['gtr']}
+
+  utter_python_dict:
+  - text: |
+      - Dictionaries are used to store data values in key:value pairs.
+      - A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+      - Dictionary items are unordered, changeable, and does not allow duplicates.
+      - Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+      - thisdict = {"brandname": "vw","car": "Mustang","year": 1964}
+
+
+actions:
+  - action_get_senderid
+  - write_conversation_to_db    
 
 session_config:
   session_expiration_time: 60

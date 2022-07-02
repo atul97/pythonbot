@@ -54,3 +54,29 @@ stories:
   steps:
   - intent: data_types
   - action: utter_data_types
+
+- story: python_strings
+  steps:
+  - intent: python_strings
+  - action: utter_python_strings
+
+- story: python_list
+  steps:
+  - intent: python_list
+  - action: utter_python_list
+
+- story: python_tuples
+  steps:
+  - intent: python_tuples
+  - action: utter_python_tuples
+  
+- story: python_set
+  steps:
+  - intent: python_set
+  - action: utter_python_set
+
+- story: get_senderid
+  steps:
+  - intent: get_senderid
+  - action: write_conversation_to_db
+
