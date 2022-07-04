@@ -8,10 +8,15 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-###########
+##############
   - about_python
   - python_uses
   - why_python
+
+  - dynamic_typed_language
+  - interpreted_language
+  - slicing
+
   - define_variable_in_python
   - data_types
 
@@ -20,8 +25,22 @@ intents:
   - python_tuples
   - python_set
   - python_dict
+  - difference_between_list_tuple
+  - list_comprehensions
+  - dict_comprehensions
 
+  - loops
+  - for_loops
+  - while_loops
+  - lambda_function
+
+###############
   - get_senderid
+
+###############
+  - name
+  - video_material
+  - pdf_material
 
 responses:
   utter_greet:
@@ -43,6 +62,8 @@ responses:
   utter_iamabot:
   - text: "I am a snakebot"
 
+  utter_name:
+  - text: "Please tell your name"
 ###############
   utter_about_python:
   - text: |
@@ -64,7 +85,30 @@ responses:
       - Python has syntax that allows developers to write programs with fewer lines than some other programming languages.
       - Python can be treated in a procedural way, an object-oriented way or a functional way.
       - Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
+################
+  utter_dynamic_typed_language:
+  - text: |
+      - Dynamic - Data Types are checked during execution.
+      - Python is an interpreted language, executes each statement line by line.
+      - Thus type-checking is done on the fly, during execution. 
+      - Hence, Python is a Dynamically Typed Language.
+  
+  utter_interpreted_language:
+  - text: |
+      - An Interpreted language executes its statements line by line.
+      - Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages.
+      - Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.
 
+  utter_slicing:
+  - text: |
+      - As the name suggests, ‘slicing’ is taking parts of.
+      - Syntax for slicing is [start : stop : step]
+      - start is the starting index from where to slice a list or tuple
+      - stop is the ending index or where to sop.
+      - step is the number of steps to jump.
+      - Slicing can be done on strings, arrays, lists, and tuples.
+      - Default value for start is 0, stop is number of items, step is 1.
+###################
   utter_define_variable_in_python:
   - text: |
       - Python has no command for declaring a variable.
@@ -124,10 +168,75 @@ responses:
       - Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
       - thisdict = {"brandname": "vw","car": "Mustang","year": 1964}
 
+  utter_difference_between_list_tuple:
+  - text: |
+      - Lists are represented with square brackets ['honda', 0.5, 10]
+      - Tuples are represented with parantheses (12, 0.3, 'mustang')
+      - The key difference between the two is that while lists are mutable
+      - Tuples on the other hand are immutable objects.
+      - This means that lists can be modified, appended or sliced on the go but tuples remain constant.
+
+  utter_list_comprehensions:
+  - text: |
+      - List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+      - Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+      - cars = ["vw", "honda", "nissan"]
+      - newlist = [x for x in cars if "a" in x]
+      - print(newlist) - ["honda", "nissan"]
+
+  utter_dict_comprehensions:
+  - text: |
+      - Dictionary comprehension is an elegant and concise way to create dictionaries.
+      - square_dict = {num: num*num for num in range(1, 5}
+      - print(square_dict)
+      - {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+
+###############
+  utter_loops:
+  - buttons:
+    - payload: while loop
+      title: WHILE Loop
+    - payload: for loop
+      title: FOR Loop
+    text: "Python has two loop commands:"
+
+  utter_for_loops:
+  - text: |
+      - A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+      - cars = ["vw", "honda", "nissan"]
+      - for x in cars:
+      -   print(x)
+
+  utter_while_loops:
+  - text: |
+      - With the while loop we can execute a set of statements as long as a condition is true.
+      - i = 1
+      - while i < 6:
+      -   print(i)
+      -   i += 1
+  
+  utter_lambda_function:
+  - text: |
+      - A lambda function is a small anonymous function.
+      - A lambda function can take any number of arguments, but can only have one expression.
+      - x = lambda a : a + 10
+      - print(x(5))
+
+  utter_video_material:
+  - text: "Check this video"
+    attachment: { "type":"video", "payload":{ "src": "https://youtube.com/embed/9C1Km6xfdMA" } }
+
+  utter_pdf_material:
+  - text: "Check this PDF"
+    custom:
+      payload: "pdf_attachment"
+      title: "Python Programming Notes"
+      url: "C:/Users/atul.aggarwal/Project/PYTHON PROGRAMMING NOTES.pdf"
 
 actions:
   - action_get_senderid
-  - write_conversation_to_db    
+  - action_write_conversation_to_db    
 
 session_config:
   session_expiration_time: 60

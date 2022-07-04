@@ -103,7 +103,7 @@ class GetSenderid(Action):
 class WriteConversationToDB(Action):
 
     def name(self) -> Text:
-        return "write_conversation_to_db"
+        return "action_write_conversation_to_db"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

@@ -29,7 +29,7 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-##############
+##############basic python
 - story: about_python
   steps:
   - intent: about_python
@@ -45,11 +45,22 @@ stories:
   - intent: why_python
   - action: utter_why_python
 
-- story: define_variable_in_python
+- story: dynamic_typed_language
   steps:
-  - intent: define_variable_in_python
-  - action: utter_define_variable_in_python
+  - intent: dynamic_typed_language
+  - action: utter_dynamic_typed_language
 
+############python misc
+- story: dynamic_typed_language
+  steps:
+  - intent: dynamic_typed_language
+  - action: utter_dynamic_typed_language
+  
+- story: interpreted_language
+  steps:
+  - intent: interpreted_language
+  - action: utter_interpreted_language
+##############python datatype
 - story: data_types
   steps:
   - intent: data_types
@@ -75,8 +86,56 @@ stories:
   - intent: python_set
   - action: utter_python_set
 
+- story: difference_between_list_tuple
+  steps:
+  - intent: difference_between_list_tuple
+  - action: utter_difference_between_list_tuple
+
+- story: list_comprehensions
+  steps:
+  - intent: list_comprehensions
+  - action: utter_list_comprehensions
+
+- story: dict_comprehensions
+  steps:
+  - intent: dict_comprehensions
+  - action: utter_dict_comprehensions
+############loop
+- story: loops
+  steps:
+  - intent: loops
+  - action: utter_loops
+
+- story: for_loops
+  steps:
+  - intent: for_loops
+  - action: utter_for_loops
+
+- story: while_loops
+  steps:
+  - intent: while_loops
+  - action: utter_while_loops
+
+- story: lambda_function
+  steps:
+  - intent: lambda_function
+  - action: utter_lambda_function
+
+
+############
 - story: get_senderid
   steps:
   - intent: get_senderid
-  - action: write_conversation_to_db
+  - action: action_write_conversation_to_db
+
+############
+- story: video_material
+  steps:
+  - intent: video_material
+  - action: utter_video_material
+
+- story: pdf_material
+  steps:
+  - intent: pdf_material
+  - action: utter_pdf_material
 

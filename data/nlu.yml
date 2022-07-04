@@ -91,7 +91,7 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-################
+################ python basic
 - intent: about_python
   examples: |
     - about python
@@ -113,6 +113,29 @@ nlu:
     - why does we choose python language
     - why should we go for python
 
+################### python misc
+- intent: dynamic_typed_language
+  examples: |
+    - dynamic typed language
+    - what is dynamic typed language
+    - data type checked during execution
+    - dynamically typed language
+
+- intent: interpreted_language
+  examples: |
+    - interpreted language
+    - what is interpreted language
+    - inter preted language
+    - is python interpreted language
+
+- intent: slicing
+  examples: |
+    - slicing
+    - list slicing
+    - what is slicing
+    - how to slice a list
+
+##################python datatype
 - intent: define_variable_in_python
   examples: |
     - how to define variable in python
@@ -162,7 +185,54 @@ nlu:
     - dict
     - what is dictionary datatype
 
-###########
+- intent: difference_between_list_tuple
+  examples: |
+    - difference between list and tuple
+    - list and tuple
+    - key difference between list and tuple
+
+- intent: list_comprehensions
+  examples: |
+    - list_comprehensions
+    - list comprehensions
+    - list comprehension
+
+- intent: dict_comprehensions
+  examples: |
+    - dict_comprehensions
+    - dictionary comprehensions
+    - dict comprehension
+#############loops
+- intent: loops
+  examples: |
+    - loops
+    - loops in python
+    - loop
+
+- intent: for_loops
+  examples: |
+    - for loops
+    - for loop
+    - for
+    - how to define while loop
+
+
+- intent: while_loops
+  examples: |
+    - while loops
+    - while loop
+    - while
+    - how to define while loop
+
+- intent: lambda_function
+  examples: |
+    - lambda function
+    - lambda
+    - lambda_function
+    - lamda
+    - what is lambda function
+
+###########python datastore
 
 - intent: get_senderid
   examples: |
@@ -170,3 +240,25 @@ nlu:
     - what is my senderid
     - please print senderid
     - sender id
+
+- intent: name
+  examples: |
+    - name
+    - my name
+    - forename
+    - full name
+
+- intent: video_material
+  examples: |
+    - video material
+    - videos
+    - video
+    - video lectures
+
+- intent: pdf_material
+  examples: |
+    - pdf material
+    - pdf
+    - notes
+    - pdf file
+    - written notes
